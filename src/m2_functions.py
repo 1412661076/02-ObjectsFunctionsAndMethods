@@ -82,12 +82,13 @@ def tri(side1, side2):
 ###############################################################################
 def TwoT(color, thickness):
     window = rg.TurtleWindow()
-    T1 = rg.SimpleTurtle()
-    T2 = rg.SimpleTurtle()
-    T1.pen = rg.Pen('green', thickness)
-    T2.pen = rg.Pen(color, 5)
 
+    T1 = rg.SimpleTurtle()
+    T1.pen = rg.Pen('green', thickness)
     T1.forward(100)
+
+    T2 = rg.SimpleTurtle()
+    T2.pen = rg.Pen(color, 5)
     T2.backward(100)
 
     window.close_on_mouse_click()
