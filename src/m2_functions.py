@@ -27,8 +27,8 @@ def main():
     You write the tests per the _TODO_s below.
     """
     tri(10, 20)
-    TwoT('blue', 8)
-    TwoT('red', 11)
+    return TwoT('red', 11)
+    return TwoT('blue', 8)
 
 
 import math

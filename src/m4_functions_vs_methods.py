@@ -4,12 +4,12 @@ Demonstrates using (calling) FUNCTIONS and using (calling) METHODS:
   -- how they differ.
 
 Authors: David Mutchler, Dave Fisher, Vibha Alangar, Amanda Stouder,
-         their colleagues and Vibha Alangar.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Rui Fang.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 #
-# TODO: 2.
+# DONE: 2.
 #   With your instructor, READ the file   methods_vs_functions.txt
 #   in this project, ASKING QUESTIONS as needed to understand its contents.
 #   After you have done so, mark this _TODO_ as DONE
@@ -28,7 +28,6 @@ def main():
     anywhere in the window to close it.
     """
     window = rg.TurtleWindow()
-
     run_example()
     try_methods()
     try_functions()
@@ -127,7 +126,15 @@ def draw_many_squares(my_turtle, number_of_squares, size, twist):
 #
 ###############################################################################
 
+
 def try_methods():
+    T1 = rg.SimpleTurtle()
+    T1.pen = rg.Pen('brown', 5)
+    T1.forward(150)
+    T1.left(90)
+    T1.forward(50)
+    T1.backward(100)
+
     """
     Constructs a SimpleTurtle and sets its   pen   to a new rg.Pen
     that is 'brown' with thickness 5.
@@ -144,6 +151,9 @@ def try_methods():
 
 
 def try_functions():
+    jump_and_move_turtle(200, 100, 300, 30)
+    jump_and_move_turtle(100, 200, 0, 0)
+    jump_and_move_turtle(-50, 50, 100, 100)
     # IMPORTANT: Read the NOTE below before you try to solve this TO-DO!
     """
     Causes several SimpleTurtles to do the following:
@@ -163,6 +173,26 @@ def try_functions():
 
 
 def try_methods_and_functions():
+    t2 = rg.SimpleTurtle()
+    t2.pen = rg.Pen('blue', 5)
+
+    t2.backward(150)
+    t2.speed = 1
+    draw_many_squares(t2, 2, 100, 30)
+
+    t2.speed = 5
+    t2.pen = rg.Pen('red', 5)
+    draw_many_squares(t2, 10, 50, 15)
+
+    t2.speed = 100
+    t2.pen = rg.Pen('red', 35)
+    draw_many_squares(t2, 8, 300, 60)
+
+    t2.pen = rg.Pen('black', 3)
+    t2.backward(200)
+    t2.draw_circle(30)
+    t2.draw_square(50)
+    
     # IMPORTANT: Read the NOTE below before you try to solve this TO-DO!
     """
     Constructs a SimpleTurtle and sets its   pen  to a new rg.Pen
